@@ -4,13 +4,15 @@
   "description": "configured boilerplate for react",
   "main": "index.js",
   "scripts": {
+    "build":"",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.ts,.tsx",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
     "format": "npm run prettier -- --write",
     "check-types": "tsc",
     "check-format": "npm run prettier -- --list-different",
     "validate": "npm run check-types && npm run check-format && npm run lint && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "husky install"
   },
   "author": "",
   "license": "ISC",
