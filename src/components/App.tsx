@@ -1,8 +1,20 @@
+import * as React from "react";
 export const arpitFunc = (a) => {
-    a + 2;
+    class A extends React.Component {
+
+    }
+    
+    console.log(A)
+    function abcd() {
+        return new Promise((res, rej) => {
+            return res(true);
+        });
+    }
+    
+    async function testAbcd(){
+        const result = await abcd();
+        console.log(result)
+    }
 };
 
 
-export const coolFunc = (a) => {
-    a + 2;
-};
