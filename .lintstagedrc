@@ -2,8 +2,10 @@
     "*.+(ts|tsx|js)":[
         "jest --config test/jest.lint.js"
     ],
-    "**/*.+(js|ts|tsx)":[
-        "prettier --write",
+    "**/*.+(js|ts|tsx|json)":[
+        "prettier --ignore-path .gitignore",
+    ],
+     "**/*.+(js|ts|tsx)":[
         "jest --findRelatedTests",
     ]
 }
