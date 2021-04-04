@@ -1,12 +1,12 @@
 module.exports = {
   ...require("./test/jest.common"),
+
   testMatch: [
     "**/__tests__/**/*.+(ts|tsx|js)",
     "**/?(*.)+(spec|test).+(ts|tsx|js)",
   ],
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-  },
+
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   // coverageThreshold: {
   //     global: {
   //         statements: 15,
@@ -15,6 +15,7 @@ module.exports = {
   //         lines: 15,
   //     },
   // },
+  testEnvironment: "jest-environment-jsdom",
 
   collectCoverageFrom: [
     "**/src/**.ts",
@@ -23,5 +24,7 @@ module.exports = {
     "!**/__tests__/**",
     "!**/node_modules/**",
   ],
+  // projects: ["./test/jest.client.js","./test/jest.lint.js"],
   projects: ["./test/jest.client.js"],
+
 };

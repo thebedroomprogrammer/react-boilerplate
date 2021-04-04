@@ -1,4 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import FavoriteNumber  from "./favorite-number";
 
-render(<div>Hello React</div>, document.getElementById("app"));
+
+render(<FavoriteNumber/>, document.getElementById("app"));

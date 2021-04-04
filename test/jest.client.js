@@ -1,8 +1,11 @@
 module.exports = {
   ...require("./jest.common"),
   displayName: "client",
-  testEnvironment: "jest-environment-jsdom",
-  modulePathIgnorePatterns: ["<rootDir>/dist/"],
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
+  },
+
+  modulePathIgnorePatterns: ["<rootDir>/dist/","<rootDir>/node_modules/"],
   setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
   snapshotSerializers: ["@emotion/jest/serializer"],
 };

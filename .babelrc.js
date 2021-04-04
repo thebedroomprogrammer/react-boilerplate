@@ -8,7 +8,7 @@ module.exports = {
     "@babel/preset-react",
     [
       "@babel/preset-env",
-      { modules: isTest ? "commonjs" : false, debug: true },
+      { modules: isTest ? "commonjs" : false },
     ],
   ],
 };
